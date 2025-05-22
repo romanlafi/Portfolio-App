@@ -24,7 +24,7 @@ export default function MobileOverlayMenu({ open, onClose, activeSection, menuIt
                 <h2 className="text-xl font-bold tracking-widest uppercase text-[var(--color-beige)]">{t('nav.menu')}</h2>
                 <button
                     onClick={onClose}
-                    className="bg-[var(--color-powder)] rounded-full p-2 hover:bg-[var(--color-beige)] transition-colors duration-200"
+                    className="bg-[var(--color-beige)] rounded-full p-2 transition-colors duration-200"
                 >
                     <FaTimes className="text-[var(--color-eerie)] text-xl" />
                 </button>

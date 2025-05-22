@@ -48,7 +48,7 @@ export default function TechBadge({ icon: Icon, label, color }) {
             className="flex items-center gap-2 text-sm font-semibold px-2 py-1 rounded transition transform hover:scale-105 hover:brightness-110"
             style={{ backgroundColor: color, color: "#fff" }}
         >
-            <Icon className="text-base" />
+            {Icon && <Icon className="text-base"/>}
             {label}
         </a>
     );

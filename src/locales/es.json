@@ -64,6 +64,6 @@
   "contact": {
     "title": "Contáctame",
     "stack_notice": "Este sitio está desarrollado con:",
-    "rpi_notice": "Este sitio web y los proyectos están desplegados en una Raspberry Pi 3 con 1GB de RAM mediante Cloudflare."
+    "rpi_notice": "Este sitio web y los proyectos del porfolio están desplegados en una Raspberry Pi 3 con 1GB de RAM mediante Cloudflare."
   }
 }

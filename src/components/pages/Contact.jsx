@@ -1,9 +1,10 @@
 import SectionWrapper from "../SectionWrapper.jsx";
 import SectionTitle from "../SectionTitle.jsx";
-import {FaEnvelope, FaLinkedin, FaReact, FaWhatsapp} from "react-icons/fa";
+import {FaLinkedin, FaReact, FaWhatsapp} from "react-icons/fa";
 import {SiJavascript, SiTailwindcss, SiVite} from "react-icons/si";
 import TechBadge from "../TechBadge.jsx";
 import {useTranslation} from "react-i18next";
+import {CgMail} from "react-icons/cg";
 
 export default function Contact() {
     const { t } = useTranslation();
@@ -14,10 +15,9 @@ export default function Contact() {
 
             <div className="space-y-4 text-[var(--color-powder)] text-sm md:text-base font-mono">
                 <div className="flex items-center gap-3">
-                    <FaEnvelope className="text-yellow-400 text-xl"/>
+                    <CgMail className="text-2xl" color="#EA4335"/>
                     <a
                         href="mailto:rlafitagil@gmail.com"
-                        className="hover:underline text-[var(--color-moss)]"
                     >
                         rlafitagil@gmail.com
                     </a>
@@ -29,7 +29,6 @@ export default function Contact() {
                         href="https://wa.me/34691160995"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:underline text-[var(--color-moss)]"
                     >
                         +34 691 160 995
                     </a>
@@ -41,7 +40,6 @@ export default function Contact() {
                         href="https://www.linkedin.com/in/rlafitagil"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:underline text-[var(--color-moss)]"
                     >
                         in/rlafitagil
                     </a>

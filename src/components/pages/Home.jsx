@@ -3,14 +3,14 @@ import {FaXTwitter} from "react-icons/fa6";
 import {Typewriter} from "react-simple-typewriter";
 import SocialIcon from "../SocialIcon.jsx";
 import {useTranslation} from "react-i18next";
+import SectionWrapper from "../SectionWrapper.jsx";
 
 export default function Home() {
     const { t } = useTranslation();
     const typewriterLines = t('home.typewriter', { returnObjects: true });
 
-
     return (
-        <main className="flex-1 flex items-center px-4 py-12 md:py-20 md:px-16 min-h-screen" id="home">
+        <SectionWrapper id="home">
             <div className="max-w-3xl">
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                     <span style={{ color: 'var(--color-moss)' }}>ROMÁN</span>{' '}
@@ -53,19 +53,13 @@ export default function Home() {
                 </a>
 
                 <div className="flex gap-4 mt-8 text-xl md:text-2xl">
-
                     <SocialIcon href="https://wa.me/34691160995" icon={FaWhatsapp} hoverColor="#25D366" />
-
                     <SocialIcon href="https://www.linkedin.com/in/rlafitagil" icon={FaLinkedinIn} hoverColor="#0077B5" />
-
                     <SocialIcon href="https://github.com/romanlafi" icon={FaGithub} hoverColor="#333" />
-
                     <SocialIcon href="https://x.com/romanlafi" icon={FaXTwitter} hoverColor="#000000" />
-
                     <SocialIcon href="https://instagram.com/romanlafi" icon={FaInstagram} hoverColor="#e4405f" />
-
                 </div>
             </div>
-        </main>
+        </SectionWrapper>
     );
 }

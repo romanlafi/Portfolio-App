@@ -6,7 +6,6 @@ import {
     FaDocker,
     FaGitAlt,
     FaHtml5,
-    FaJava,
     FaNodeJs,
     FaPython,
     FaReact
@@ -17,19 +16,16 @@ import {
     SiBootstrap, SiGimp,
     SiHibernate,
     SiIntellijidea,
-    SiJavascript, SiMongodb, SiMysql,
-    SiNeo4J,
+    SiJavascript, SiMongodb, SiNeo4J,
     SiNginx, SiPostgresql, SiPostman,
     SiPycharm,
     SiSap,
     SiSpring,
-    SiSqlite,
     SiTailwindcss,
     SiTypescript,
     SiUnity, SiVite, SiWebstorm
 } from "react-icons/si";
-import {BiLogoPostgresql, BiLogoVisualStudio} from "react-icons/bi";
-import {TbSql} from "react-icons/tb";
+import {BiLogoVisualStudio} from "react-icons/bi";
 import {GrMysql} from "react-icons/gr";
 import {DiSqllite, DiVisualstudio} from "react-icons/di";
 import TechBadge from "../TechBadge.jsx";
