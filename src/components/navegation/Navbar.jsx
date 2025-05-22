@@ -49,7 +49,7 @@ export default function Navbar() {
                     style={{ backgroundColor: 'var(--color-eerie)', color: 'var(--color-powder)' }}
                 >
                     <img
-                        src="/src/assets/logo.png"
+                        src="/logo.png"
                         alt="Avatar"
                         className="w-45 h-45 mb-6 object-contain"
                     />
