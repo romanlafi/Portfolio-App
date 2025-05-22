@@ -12,10 +12,11 @@
     "email_intro": "If you'd like to get in touch, write to",
     "cv": "Download my CV",
     "typewriter": [
-      "On the path to becoming a developer.",
-      "Passionate about frontend.",
-      "Building beautiful interfaces.",
-      "Technology enthusiast."
+      "Tech enthusiast.",
+      "Building things that make sense.",
+      "Frontend, backend... whatever's needed.",
+      "Learning something new every day.",
+      "Trying not to break production."
     ]
   },
   "about": {
