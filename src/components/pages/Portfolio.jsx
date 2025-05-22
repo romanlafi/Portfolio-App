@@ -20,14 +20,14 @@ export default function Portfolio() {
     const projects = [
         {
             title: "Task Manager",
-            image: "/src/assets/taskmanager.png",
+            image: "/taskmanager.png",
             tech: [BiLogoPostgresql, FaPython, SiFastapi, SiReact, SiVite, SiJavascript, SiCss3, FaDocker, SiNginx],
             github: "https://github.com/romanlafi/TaskManager-App",
             demo: "https://taskmanager.romanlafi.org/",
         },
         {
             title: "MovieGraph",
-            image: "/src/assets/moviegraph.png",
+            image: "/moviegraph.png",
             tech: [SiThemoviedatabase, BiLogoPostgresql, FaPython, SiFastapi, FaReact, SiVite, SiTypescript, SiTailwindcss, FaDocker, SiNginx],
             github: "https://github.com/romanlafi/MovieGraph-App",
             demo: "https://moviegraph.romanlafi.org/",
