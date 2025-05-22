@@ -34,14 +34,17 @@ import {GrMysql} from "react-icons/gr";
 import {DiSqllite, DiVisualstudio} from "react-icons/di";
 import TechBadge from "../TechBadge.jsx";
 import {RiJavaLine} from "react-icons/ri";
+import {useTranslation} from "react-i18next";
 
 export default function Skills() {
+    const { t } = useTranslation();
+
     return (
         <SectionWrapper id="skills" scrollMargin="scroll-mt-15 md:scroll-mt-0">
-            <SectionTitle title="SKILLS" />
+            <SectionTitle title={t('skills.title')} />
 
             <div className="mb-10">
-                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">Lenguajes de Programación</h3>
+                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">{t('skills.languages')} </h3>
                 <div className="flex flex-wrap gap-4 text-3xl sm:text-4xl">
                     <TechBadge icon={RiJavaLine} label="Java" color="#f89820" />
                     <TechBadge icon={FaPython} label="Python" color="#3776AB" />
@@ -53,7 +56,7 @@ export default function Skills() {
             </div>
 
             <div className="mb-10">
-                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">Desarrollo Web</h3>
+                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">{t('skills.web_dev')} </h3>
                 <div className="flex flex-wrap gap-4 text-3xl sm:text-4xl">
                     <TechBadge icon={FaHtml5} label="HTML" color="#E34F26" />
                     <TechBadge icon={FaCss3Alt} label="CSS" color="#1572B6" />
@@ -63,7 +66,7 @@ export default function Skills() {
             </div>
 
             <div className="mb-10">
-                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">Frameworks y Librerías</h3>
+                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">{t('skills.frameworks')} </h3>
 
                 <h4 className="text-sm font-semibold text-[var(--color-powder)] mb-2">Frontend</h4>
                 <div className="flex flex-wrap gap-4 text-3xl sm:text-4xl mb-4">
@@ -87,7 +90,7 @@ export default function Skills() {
             </div>
 
             <div className="mb-10">
-                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">DevOps y Contenedores</h3>
+                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">{t('skills.devops')} </h3>
                 <div className="flex flex-wrap gap-4 text-3xl sm:text-4xl">
                     <TechBadge icon={FaDocker} label="Docker" color="#2496ED" />
                     <TechBadge icon={FaGitAlt} label="Git" color="#F05032" />
@@ -97,7 +100,7 @@ export default function Skills() {
             </div>
 
             <div className="mb-10">
-                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">Bases de Datos</h3>
+                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">{t('skills.ddbb')} </h3>
                 <div className="flex flex-wrap gap-4 text-3xl sm:text-4xl">
                     <TechBadge icon={SiPostgresql} label="PostgreSQL" color="#336791" />
                     <TechBadge icon={GrMysql} label="MySQL" color="#00758F" />
@@ -108,7 +111,7 @@ export default function Skills() {
             </div>
 
             <div className="mb-10">
-                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4">HERRAMIENTAS / IDEs</h3>
+                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4">{t('skills.ides')} </h3>
                 <div className="flex flex-wrap gap-4 text-3xl sm:text-4xl">
                     <TechBadge icon={SiIntellijidea} label="IntelliJ IDEA" color="#FD4F8C" />
                     <TechBadge icon={SiPycharm} label="PyCharm" color="#21d789" />
@@ -121,13 +124,13 @@ export default function Skills() {
             </div>
 
             <div>
-                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">Herramientas multimedia</h3>
+                <h3 className="text-lg font-bold text-[var(--color-beige)] mb-4 uppercase">{t('skills.multimedia')} </h3>
                 <div className="flex flex-wrap gap-4 text-3xl sm:text-4xl">
                     <TechBadge icon={SiAudacity} label="Audacity" color="#0000CC" />
                     <TechBadge  icon={SiGimp} label="GIMP" color="#5C5543" />
                 </div>
                 <p className="text-xs text-[var(--color-powder)] mt-3">
-                    Utilizadas ocasionalmente para edición de logos, sprites y audio en juegos o interfaces.
+                    {t('skills.multimedia_comment')}
                 </p>
             </div>
         </SectionWrapper>

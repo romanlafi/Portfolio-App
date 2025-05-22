@@ -1,13 +1,16 @@
 import SectionWrapper from "../SectionWrapper.jsx";
 import SectionTitle from "../SectionTitle.jsx";
 import {FaEnvelope, FaLinkedin, FaReact, FaWhatsapp} from "react-icons/fa";
-import {SiBootstrap, SiJavascript, SiTailwindcss, SiVite} from "react-icons/si";
+import {SiJavascript, SiTailwindcss, SiVite} from "react-icons/si";
 import TechBadge from "../TechBadge.jsx";
+import {useTranslation} from "react-i18next";
 
 export default function Contact() {
+    const { t } = useTranslation();
+
     return (
         <SectionWrapper id="contact">
-            <SectionTitle title="CONTÁCTAME"/>
+            <SectionTitle title={t('contact.title')}/>
 
             <div className="space-y-4 text-[var(--color-powder)] text-sm md:text-base font-mono">
                 <div className="flex items-center gap-3">
@@ -48,14 +51,17 @@ export default function Contact() {
             {/* Footer Tech Stack */}
             <div className="mt-12">
                 <p className="text-sm font-bold uppercase mb-4">
-                    Este sitio está desarrollado con:
+                    {t('contact.stack_notice')}
                 </p>
                 <div className="flex flex-wrap gap-2 text-sm font-semibold">
-                    <TechBadge icon={FaReact} label="React" color="#61DAFB" />
+                    <TechBadge icon={FaReact} label="React" color="#4CB7D8" />
                     <TechBadge icon={SiVite} label="Vite" color="#646CFF" />
-                    <TechBadge icon={SiJavascript} label="JavaScript" color="#F7DF1E" />
+                    <TechBadge icon={SiJavascript} label="JavaScript" color="#E4C700" />
                     <TechBadge icon={SiTailwindcss} label="Tailwind CSS" color="#06B6D4" />
                 </div>
+                <p className="text-xs text-[var(--color-powder)] mt-4 max-w-md">
+                    {t('contact.rpi_notice')}
+                </p>
             </div>
         </SectionWrapper>
     );

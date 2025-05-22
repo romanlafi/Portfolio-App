@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "about": "ABOUT ME",
+    "portfolio": "PORTFOLIO",
+    "education": "EDUCATION",
+    "skills": "SKILLS",
+    "contact": "CONTACT",
+    "menu": "Menu"
+  },
+  "home": {
+    "greeting": "Welcome to my developer portfolio.",
+    "email_intro": "If you'd like to get in touch, write to",
+    "cv": "Download my CV",
+    "typewriter": [
+      "On the path to becoming a developer.",
+      "Passionate about frontend.",
+      "Building beautiful interfaces.",
+      "Technology enthusiast."
+    ]
+  },
+  "about": {
+    "title": "About me",
+    "p1": "I studied violin and spent years focused on music. I've always enjoyed creating and learning, and over time I found programming to be the perfect environment for both personal and professional growth.",
+    "p2": "Since 2021 I've been learning, building projects, and working as a developer. I keep learning every day and enjoying the process.",
+    "p3": "Want to get in touch? Write me at"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "github_link": "Code",
+    "webpage_link": "Go to site"
+  },
+  "education": {
+    "title": "EDUCATION AND TRAINING",
+    "dam": {
+      "title": "Technician in Cross-Platform Application Development",
+      "school": "IES Ítaca"
+    },
+    "violin": {
+      "title": "Bachelor's Degree in Violin",
+      "school": "Superior Conservatory of Music of Aragón"
+    },
+    "sap": {
+      "title": "SAP ABAP Developer – Internship (FCT)"
+    },
+    "c1": {
+      "title": "English Certificate (Level C1)"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "languages": "Programming Languages",
+    "web_dev": "Web Development",
+    "frameworks": "Frameworks and Libraries",
+    "devops": "DevOps and Containers",
+    "ddbb": "Databases",
+    "ides": "TOOLS / IDEs",
+    "multimedia": "Multimedia Tools",
+    "multimedia_comment": "Occasionally used for editing logos, sprites, and audio in games or interfaces."
+  },
+  "contact": {
+    "title": "Contact me",
+    "stack_notice": "This site is built with:",
+    "rpi_notice": "This website and the portfolio projects are deployed on a Raspberry Pi 3 with 1GB of RAM via Cloudflare."
+  }
+}

@@ -1,17 +1,21 @@
 import { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import MobileOverlayMenu from "./MobileOverlayMenu.jsx";
+import LanguageToggle from "/src/components/LanguageToggle.jsx";
+import {useTranslation} from "react-i18next";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
 
+    const { t } = useTranslation();
+
     const menuItems = [
-        { label: 'SOBRE MI', href: '#about' },
-        { label: 'PORTFOLIO', href: '#portfolio' },
-        { label: 'EDUCACIÓN', href: '#education' },
-        { label: 'SKILLS', href: '#skills' },
-        { label: 'CONTACTO', href: '#contact' },
+        { label: t('nav.about'), href: '#about' },
+        { label: t('nav.portfolio'), href: '#portfolio' },
+        { label: t('nav.education'), href: '#education' },
+        { label: t('nav.skills'), href: '#skills' },
+        { label: t('nav.contact'), href: '#contact' },
     ];
 
     useEffect(() => {
@@ -77,6 +81,9 @@ export default function Navbar() {
                             );
                         })}
                     </nav>
+                    <div className="absolute bottom-3">
+                        <LanguageToggle />
+                    </div>
                 </aside>
 
                 {/* MOBILE HEADER - FIJO */}

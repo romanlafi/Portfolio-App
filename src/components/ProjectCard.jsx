@@ -1,6 +1,9 @@
 import {FaExternalLinkAlt, FaGithub} from "react-icons/fa";
+import {useTranslation} from "react-i18next";
 
 export default function ProjectCard({ title, image, tech, github, demo }) {
+    const { t } = useTranslation();
+
     return (
         <div className="w-full max-w-[500px] mx-auto bg-[var(--color-eerie)] rounded-xl shadow-lg overflow-hidden transition hover:scale-105 duration-300">
             <img
@@ -24,7 +27,7 @@ export default function ProjectCard({ title, image, tech, github, demo }) {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 hover:text-[var(--color-beige)] transition"
                     >
-                        <FaGithub /> <span className="text-sm sm:text-base">Código</span>
+                        <FaGithub /> <span className="text-sm sm:text-base">{t('portfolio.github_link')}</span>
                     </a>
                     <a
                         href={demo}
@@ -32,7 +35,7 @@ export default function ProjectCard({ title, image, tech, github, demo }) {
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 hover:text-[var(--color-beige)] transition"
                     >
-                        <FaExternalLinkAlt /> <span className="text-sm sm:text-base">Ver sitio</span>
+                        <FaExternalLinkAlt /> <span className="text-sm sm:text-base">{t('portfolio.webpage_link')}</span>
                     </a>
                 </div>
             </div>

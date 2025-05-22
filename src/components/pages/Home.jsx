@@ -2,8 +2,13 @@ import {FaLinkedinIn, FaGithub, FaInstagram, FaWhatsapp} from 'react-icons/fa';
 import {FaXTwitter} from "react-icons/fa6";
 import {Typewriter} from "react-simple-typewriter";
 import SocialIcon from "../SocialIcon.jsx";
+import {useTranslation} from "react-i18next";
 
 export default function Home() {
+    const { t } = useTranslation();
+    const typewriterLines = t('home.typewriter', { returnObjects: true });
+
+
     return (
         <main className="flex-1 flex items-center px-4 py-12 md:py-20 md:px-16 min-h-screen" id="home">
             <div className="max-w-3xl">
@@ -14,12 +19,7 @@ export default function Home() {
 
                 <p className="mt-2 text-yellow-300 text-sm md:text-base mono">
                     <Typewriter
-                        words={[
-                            'En la ruta de ser un desarrollador.',
-                            'Apasionado por el frontend.', 
-                            'Construyendo interfaces bonitas.',
-                            'Amante de la tecnología.'
-                        ]}
+                        words={typewriterLines}
                         loop={0}
                         cursor
                         cursorStyle="|"
@@ -29,12 +29,12 @@ export default function Home() {
                     />
                 </p>
 
-                <p className="mt-4 text-lg font-mono text-powder tracking-wide">
-                    BIENVENIDX A MI PORFOLIO COMO DESARROLLADOR.
+                <p className="mt-4 text-lg font-mono text-powder tracking-wide uppercase">
+                    {t('home.greeting')}
                 </p>
 
                 <p className="mt-2 text-sm" style={{ color: 'var(--color-beige)' }}>
-                    Si quieres ponerte en contacto conmigo escríbeme a{' '}
+                    {t('home.email_intro')}{' '}
                     <a
                         href="mailto:rlafitagil@gmail.com"
                         className="underline"
@@ -49,7 +49,7 @@ export default function Home() {
                     download
                     className="inline-block mt-6 px-6 py-2 bg-[var(--color-moss)] text-[var(--color-powder)] font-bold rounded-lg shadow-md hover:bg-[var(--color-eerie)] transition-colors duration-300"
                 >
-                    Descarga mi CV
+                    {t('home.cv')}
                 </a>
 
                 <div className="flex gap-4 mt-8 text-xl md:text-2xl">

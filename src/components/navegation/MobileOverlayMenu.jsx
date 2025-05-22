@@ -1,7 +1,11 @@
 import {useEffect} from "react";
 import {FaTimes} from "react-icons/fa";
+import LanguageToggle from "../LanguageToggle.jsx";
+import {useTranslation} from "react-i18next";
 
 export default function MobileOverlayMenu({ open, onClose, activeSection, menuItems }) {
+    const { t } = useTranslation();
+
     useEffect(() => {
         document.body.style.overflow = open ? "hidden" : "";
         return () => {
@@ -17,7 +21,7 @@ export default function MobileOverlayMenu({ open, onClose, activeSection, menuIt
             style={{ backgroundColor: 'var(--color-eerie)' }}
         >
             <div className="flex justify-between items-center py-6 px-6 border-b border-white/10">
-                <h2 className="text-xl font-bold tracking-widest uppercase text-[var(--color-beige)]">Menú</h2>
+                <h2 className="text-xl font-bold tracking-widest uppercase text-[var(--color-beige)]">{t('nav.menu')}</h2>
                 <button
                     onClick={onClose}
                     className="bg-[var(--color-powder)] rounded-full p-2 hover:bg-[var(--color-beige)] transition-colors duration-200"
@@ -48,6 +52,9 @@ export default function MobileOverlayMenu({ open, onClose, activeSection, menuIt
                         {item.label}
                     </a>
                 ))}
+                <div className="absolute bottom-6 left-35 w-full flex justify-center">
+                    <LanguageToggle />
+                </div>
             </nav>
         </div>
     );

@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "about": "SOBRE MÍ",
+    "portfolio": "PORTFOLIO",
+    "education": "EDUCACIÓN",
+    "skills": "SKILLS",
+    "contact": "CONTACTO",
+    "menu": "Menú"
+  },
+  "home": {
+    "greeting": "Bienvenidx a mi porfolio como desarrollador.",
+    "email_intro": "Si quieres ponerte en contacto conmigo escríbeme a",
+    "cv": "Descarga mi CV",
+    "typewriter": [
+      "En la ruta de ser un desarrollador.",
+      "Apasionado por el frontend.",
+      "Construyendo interfaces bonitas.",
+      "Amante de la tecnología."
+    ]
+  },
+  "about": {
+    "title": "Sobre mí",
+    "p1": "Estudié violín y durante años estuve centrado en la música. Siempre me ha gustado crear y aprender, y con el tiempo decidí dar un giro encontrando en la programación el entorno perfecto para desarrollarme personal y laboralmente.",
+    "p2": "Desde 2021 he estado formándome, haciendo proyectos y trabajando como desarrollador. Sigo aprendiendo cada día y disfrutando del proceso.",
+    "p3": "¿Quieres contactarme? Escríbeme a"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "github_link": "Código",
+    "webpage_link": "Ver sitio"
+  },
+  "education": {
+    "title": "EDUCACIÓN Y FORMACIÓN",
+    "dam": {
+      "title": "Técnico en Desarrollo de Aplicaciones Multiplataforma",
+      "school": "IES Ítaca"
+    },
+    "javaangular": {
+      "title": "Formación en Tecnologías Java, Springboot y Angular (75h)",
+      "school": "Formadores IT"
+    },
+    "violin": {
+      "title": "Licenciatura en Violín",
+      "school": "Conservatorio Superior de Música de Aragón"
+    },
+    "sap": {
+      "title": "Desarrollador de SAP ABAP - FCT"
+    },
+    "c1": {
+      "title": "Certificación de Inglés (Nivel C1)"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "languages": "Lenguajes de Programación",
+    "web_dev": "Desarrollo Web",
+    "frameworks": "Frameworks y Librerías",
+    "devops": "DevOps y Contenedores",
+    "ddbb": "Bases de Datos",
+    "ides": "HERRAMIENTAS / IDEs",
+    "multimedia": "Herramientas multimedia",
+    "multimedia_comment": "Utilizadas ocasionalmente para edición de logos, sprites y audio en juegos o interfaces."
+  },
+  "contact": {
+    "title": "Contáctame",
+    "stack_notice": "Este sitio está desarrollado con:",
+    "rpi_notice": "Este sitio web y los proyectos están desplegados en una Raspberry Pi 3 con 1GB de RAM mediante Cloudflare."
+  }
+}

@@ -1,18 +1,21 @@
 import SectionTitle from "../SectionTitle.jsx";
 import SectionWrapper from "../SectionWrapper.jsx";
+import {useTranslation} from "react-i18next";
 
 export default function About() {
+    const { t } = useTranslation();
+
     return (
         <SectionWrapper id="about" maxWidth="max-w-3xl">
-                <SectionTitle title="SOBRE MÍ"/>
+                <SectionTitle title={t('about.title')}/>
                 <p className="text-powder mb-4">
-                    Empecé mi trayectoria profesional como Gestor Cultural hace más de 14 años. La llegada de la pandemia me llevó a volcarme al mundo web.
+                    {t('about.p1')}
                 </p>
-                <p className="text-[var(--color-moss)] font-bold mb-4">
-                    ACTUALMENTE ESTUDIO Y BUSCO AMPLIAR MI CAMPO LABORAL EN EL MUNDO DEL DESARROLLO WEB.
+                <p className="text-[var(--color-moss)] font-bold mb-4 uppercase">
+                    {t('about.p2')}
                 </p>
                 <p className="text-sm text-[var(--color-beige)]">
-                    ¿Quieres contactarme? Escríbeme a{' '}
+                    {t('about.p3')}{' '}
                     <a href="mailto:rlafitagil@gmail.com" className="underline text-[var(--color-moss)]">rlafitagil@gmail.com</a>
                 </p>
         </SectionWrapper>
