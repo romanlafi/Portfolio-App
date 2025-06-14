@@ -14,7 +14,7 @@ import {
     SiAndroidstudio,
     SiAngular, SiAudacity,
     SiBootstrap, SiGimp,
-    SiHibernate,
+    SiHibernate, SiInsomnia,
     SiIntellijidea,
     SiJavascript, SiMongodb, SiNeo4J,
     SiNginx, SiPostgresql, SiPostman,
@@ -116,6 +116,8 @@ export default function Skills() {
                     <TechBadge icon={DiVisualstudio} label="Visual Studio" color="#5C2D91" />
                     <TechBadge icon={BiLogoVisualStudio} label="Visual Studio Code" color="#007ACC" />
                     <TechBadge icon={SiPostman} label="Postman" color="#FF6C37" />
+                    <TechBadge icon={SiInsomnia} label="Insomnia" color="#4000BF" />
+
                 </div>
             </div>
 

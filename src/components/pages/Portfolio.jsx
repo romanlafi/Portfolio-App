@@ -1,7 +1,7 @@
 import {
     FaReact,
     FaPython,
-    FaDocker
+    FaDocker, FaJava, FaAngular
 } from 'react-icons/fa';
 import {
     SiTailwindcss,
@@ -9,12 +9,14 @@ import {
     SiFastapi,
     SiReact,
     SiThemoviedatabase,
-    SiVite, SiTypescript, SiNginx, SiCss3
+    SiVite, SiTypescript, SiNginx, SiCss3, SiLastdotfm, SiSpring, SiAngular, SiSpotify, SiApachecouchdb
 } from 'react-icons/si';
-import {BiLogoPostgresql} from "react-icons/bi";
+import {BiLogoBootstrap, BiLogoPostgresql, BiLogoSpotify} from "react-icons/bi";
 import ProjectCard from "../ProjectCard.jsx";
 import SectionTitle from "../SectionTitle.jsx";
 import SectionWrapper from "../SectionWrapper.jsx";
+import {TbBrandCouchdb} from "react-icons/tb";
+import {RiJavaLine} from "react-icons/ri";
 
 export default function Portfolio() {
     const projects = [
@@ -22,6 +24,13 @@ export default function Portfolio() {
             title: "Task Manager",
             image: "/taskmanager.png",
             tech: [BiLogoPostgresql, FaPython, SiFastapi, SiReact, SiVite, SiJavascript, SiCss3, FaDocker, SiNginx],
+            github: "https://github.com/romanlafi/TaskManager-App",
+            demo: "https://taskmanager.romanlafi.org/",
+        },
+        {
+            title: "TuneStack",
+            image: "/taskmanager.png",
+            tech: [BiLogoSpotify, SiApachecouchdb, RiJavaLine, SiSpring, FaAngular, SiTypescript, BiLogoBootstrap, FaDocker, SiNginx],
             github: "https://github.com/romanlafi/TaskManager-App",
             demo: "https://taskmanager.romanlafi.org/",
         },
