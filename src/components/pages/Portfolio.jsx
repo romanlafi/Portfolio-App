@@ -28,13 +28,6 @@ export default function Portfolio() {
             demo: "https://taskmanager.romanlafi.org/",
         },
         {
-            title: "TuneStack",
-            image: "/taskmanager.png",
-            tech: [BiLogoSpotify, SiApachecouchdb, RiJavaLine, SiSpring, FaAngular, SiTypescript, BiLogoBootstrap, FaDocker, SiNginx],
-            github: "https://github.com/romanlafi/TaskManager-App",
-            demo: "https://taskmanager.romanlafi.org/",
-        },
-        {
             title: "MovieGraph",
             image: "/moviegraph.png",
             tech: [SiThemoviedatabase, BiLogoPostgresql, FaPython, SiFastapi, FaReact, SiVite, SiTypescript, SiTailwindcss, FaDocker, SiNginx],
