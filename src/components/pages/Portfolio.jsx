@@ -1,7 +1,7 @@
 import {
     FaReact,
     FaPython,
-    FaDocker, FaJava, FaAngular
+    FaDocker
 } from 'react-icons/fa';
 import {
     SiTailwindcss,
@@ -9,14 +9,15 @@ import {
     SiFastapi,
     SiReact,
     SiThemoviedatabase,
-    SiVite, SiTypescript, SiNginx, SiCss3, SiLastdotfm, SiSpring, SiAngular, SiSpotify, SiApachecouchdb
+    SiVite,
+    SiTypescript,
+    SiNginx,
+    SiCss3
 } from 'react-icons/si';
-import {BiLogoBootstrap, BiLogoPostgresql, BiLogoSpotify} from "react-icons/bi";
+import {BiLogoPostgresql} from "react-icons/bi";
 import ProjectCard from "../ProjectCard.jsx";
 import SectionTitle from "../SectionTitle.jsx";
 import SectionWrapper from "../SectionWrapper.jsx";
-import {TbBrandCouchdb} from "react-icons/tb";
-import {RiJavaLine} from "react-icons/ri";
 
 export default function Portfolio() {
     const projects = [
