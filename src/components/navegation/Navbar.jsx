@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import MobileOverlayMenu from "./MobileOverlayMenu.jsx";
-import LanguageToggle from "/src/components/LanguageToggle.jsx";
+import LanguageToggle from "../LanguageToggle.jsx";
 import {useTranslation} from "react-i18next";
 
 export default function Navbar() {
@@ -49,7 +49,7 @@ export default function Navbar() {
                     style={{ backgroundColor: 'var(--color-eerie)', color: 'var(--color-powder)' }}
                 >
                     <img
-                        src="/logo.png"
+                        src="/logo.webp"
                         alt="Avatar"
                         className="w-45 h-45 mb-6 object-contain"
                     />
@@ -66,11 +66,11 @@ export default function Navbar() {
                     </a>
 
                     <nav className="space-y-4 text-center text-sm font-mono tracking-wide uppercase w-full">
-                        {menuItems.map((item, i) => {
+                        {menuItems.map((item) => {
                             const isActive = activeSection === item.href.substring(1);
                             return (
                                 <a
-                                    key={i}
+                                    key={item.href}
                                     href={item.href}
                                     className={`block transition-all duration-200 hover:text-[var(--color-beige)] ${
                                         isActive ? 'text-[var(--color-beige)] font-bold' : 'text-[var(--color-moss)]'
@@ -105,7 +105,6 @@ export default function Navbar() {
                 </header>
 
                 <MobileOverlayMenu
-                    key={activeSection}
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
                     activeSection={activeSection}

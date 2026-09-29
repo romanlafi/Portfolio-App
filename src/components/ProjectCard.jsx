@@ -9,14 +9,16 @@ export default function ProjectCard({ title, image, tech, github, demo }) {
             <img
                 src={image}
                 alt={title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-48 sm:h-80 object-cover"
             />
             <div className="p-4 sm:p-6">
                 <h3 className="project-title text-lg sm:text-xl font-bold mb-3">{title}</h3>
 
                 <div className="flex flex-wrap gap-3 text-xl sm:text-2xl mb-4 text-[var(--color-moss)]">
-                    {tech.map((Icon, idx) => (
-                        <Icon key={idx} />
+                    {tech.map(({ id, Icon }) => (
+                        <Icon key={id} />
                     ))}
                 </div>
 

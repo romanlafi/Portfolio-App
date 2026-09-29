@@ -1,6 +1,6 @@
 import {useTranslation} from "react-i18next";
-import esFlag from '/src/assets/flags/es.svg';
-import gbFlag from '/src/assets/flags/uk.svg';
+import esFlag from '../assets/flags/es.svg';
+import gbFlag from '../assets/flags/uk.svg';
 
 export default function LanguageToggle() {
     const { i18n } = useTranslation();

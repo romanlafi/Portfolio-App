@@ -40,9 +40,9 @@ export default function MobileOverlayMenu({ open, onClose, activeSection, menuIt
                 >
                     ROMÁN
                 </a>
-                {menuItems.map((item, i) => (
+                {menuItems.map((item) => (
                     <a
-                        key={i}
+                        key={item.href}
                         href={item.href}
                         onClick={onClose}
                         className={`hover:text-[var(--color-beige)] hover:scale-105 transition-all duration-200 uppercase ${
