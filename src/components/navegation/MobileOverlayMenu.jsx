@@ -38,7 +38,7 @@ export default function MobileOverlayMenu({ open, onClose, activeSection, menuIt
                         activeSection === "home" ? "text-[var(--color-beige)] font-bold" : ""
                     }`}
                 >
-                    ROMÁN
+                    HOME
                 </a>
                 {menuItems.map((item) => (
                     <a

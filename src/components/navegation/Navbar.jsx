@@ -62,7 +62,7 @@ export default function Navbar() {
                                 : 'text-[var(--color-moss)]'
                         }`}
                     >
-                        ROMÁN
+                        HOME
                     </a>
 
                     <nav className="space-y-4 text-center text-sm font-mono tracking-wide uppercase w-full">

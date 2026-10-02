@@ -5,14 +5,16 @@ import {
 } from 'react-icons/fa';
 import {
     SiTailwindcss,
-    SiJavascript,
     SiFastapi,
     SiReact,
     SiThemoviedatabase,
     SiVite,
     SiTypescript,
-    SiNginx,
-    SiCss3
+    SiCloudflareworkers,
+    SiHono,
+    SiReactrouter,
+    SiLucide,
+    SiNginx
 } from 'react-icons/si';
 import {BiLogoPostgresql} from "react-icons/bi";
 import ProjectCard from "../ProjectCard.jsx";
@@ -23,18 +25,22 @@ export default function Portfolio() {
     const projects = [
         {
             id: "task-manager",
-            title: "Task Manager",
-            image: "/taskmanager.webp",
+            title: "TaskManager",
+            screenshots: [
+                "/taskmanager-login.webp",
+                "/taskmanager-list.webp",
+                "/taskmanager-board.webp",
+                "/taskmanager-calendar.webp",
+            ],
             tech: [
-                { id: "postgresql", Icon: BiLogoPostgresql },
-                { id: "python", Icon: FaPython },
-                { id: "fastapi", Icon: SiFastapi },
+                { id: "typescript", Icon: SiTypescript },
                 { id: "react", Icon: SiReact },
+                { id: "react-router", Icon: SiReactrouter },
                 { id: "vite", Icon: SiVite },
-                { id: "javascript", Icon: SiJavascript },
-                { id: "css", Icon: SiCss3 },
-                { id: "docker", Icon: FaDocker },
-                { id: "nginx", Icon: SiNginx },
+                { id: "tailwind-css", Icon: SiTailwindcss },
+                { id: "lucide", Icon: SiLucide },
+                { id: "hono", Icon: SiHono },
+                { id: "cloudflare-workers", Icon: SiCloudflareworkers },
             ],
             github: "https://github.com/romanlafi/TaskManager-App",
             demo: "https://taskmanager.romanlafi.org/",
