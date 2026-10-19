@@ -81,8 +81,8 @@ export default function ProjectCard({ title, image, screenshots, mobileScreensho
                     </picture>
                 ))}
                 {images.length > 1 && (
-                    <div className="absolute inset-x-0 top-full flex h-10 items-center justify-center opacity-100 transition-opacity duration-300 md:top-auto md:bottom-3 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100">
-                        <div className="flex">
+                    <div className="absolute inset-x-0 top-full flex h-10 items-center justify-center opacity-100 transition-opacity duration-300 md:top-auto md:bottom-3 md:h-auto md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100">
+                        <div className="flex md:gap-1.5">
                             {images.map((src, index) => (
                                 <button
                                     key={src}
@@ -90,9 +90,9 @@ export default function ProjectCard({ title, image, screenshots, mobileScreensho
                                     aria-label={t('portfolio.show_screenshot', { project: title, number: index + 1 })}
                                     aria-pressed={index === activeImage}
                                     onClick={() => setActiveImage(index)}
-                                    className="flex h-10 w-8 cursor-pointer items-center justify-center rounded-md bg-transparent p-0 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--color-beige)]"
+                                    className="relative flex h-10 w-8 cursor-pointer items-center justify-center rounded-md bg-transparent p-0 hover:bg-white/5 after:absolute after:-inset-1 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--color-beige)] md:h-1.5 md:w-auto md:rounded-none md:after:-inset-y-3 md:after:-inset-x-1 md:hover:bg-transparent"
                                 >
-                                    <span className={`h-1.5 rounded-full transition-all duration-300 ${index === activeImage ? "w-4 bg-[var(--color-beige)] md:bg-white" : "w-1.5 bg-[var(--color-moss)]/50 md:bg-white/50"}`} />
+                                    <span className={`h-1.5 rounded-full transition-all duration-300 ${index === activeImage ? "w-4 bg-[var(--color-beige)] md:w-5 md:bg-white" : "w-1.5 bg-[var(--color-moss)]/50 md:bg-white/50"}`} />
                                 </button>
                             ))}
                         </div>
