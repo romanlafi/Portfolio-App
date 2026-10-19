@@ -27,6 +27,8 @@
   },
   "portfolio": {
     "title": "Portfolio",
+    "screenshot_alt": "{{project}}: screenshot {{number}}",
+    "show_screenshot": "Show screenshot {{number}} of {{project}}",
     "github_link": "Code",
     "webpage_link": "Go to site"
   },

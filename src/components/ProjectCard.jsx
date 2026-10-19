@@ -1,12 +1,13 @@
 import {FaExternalLinkAlt, FaGithub} from "react-icons/fa";
 import {useTranslation} from "react-i18next";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
-export default function ProjectCard({ title, image, screenshots, tech, github, demo }) {
+export default function ProjectCard({ title, image, screenshots, mobileScreenshots, tech, github, demo }) {
     const { t } = useTranslation();
     const images = screenshots?.length ? screenshots : [image];
     const [activeImage, setActiveImage] = useState(0);
     const [hovered, setHovered] = useState(false);
+    const touchStart = useRef(null);
 
     useEffect(() => {
         if (!hovered || images.length < 2) return undefined;
@@ -23,32 +24,78 @@ export default function ProjectCard({ title, image, screenshots, tech, github, d
         setActiveImage(0);
     };
 
+    const handleTouchEnd = (event) => {
+        const start = touchStart.current;
+        touchStart.current = null;
+        const touch = event.changedTouches[0];
+        if (!start || !touch) return;
+
+        const horizontalDistance = touch.clientX - start.x;
+        const verticalDistance = touch.clientY - start.y;
+        if (Math.abs(horizontalDistance) < 40 || Math.abs(horizontalDistance) <= Math.abs(verticalDistance)) return;
+
+        const direction = horizontalDistance < 0 ? 1 : -1;
+        setActiveImage((current) => (current + direction + images.length) % images.length);
+    };
+
     return (
         <div
             className="group w-full max-w-[500px] mx-auto bg-[var(--color-eerie)] rounded-xl shadow-lg overflow-hidden transition hover:scale-105 duration-300"
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={resetSlideshow}
+            onPointerEnter={(event) => {
+                if (event.pointerType === "mouse") setHovered(true);
+            }}
+            onPointerLeave={(event) => {
+                if (event.pointerType === "mouse") resetSlideshow();
+            }}
         >
-            <div className="relative h-48 w-full sm:h-80">
+            <div
+                className={`relative w-full ${images.length > 1 ? "mb-10 md:mb-0" : ""} ${mobileScreenshots?.length ? "aspect-[39/70] max-h-[640px] bg-black/20 md:aspect-auto md:h-80 md:max-h-none" : "h-48 sm:h-80"}`}
+                onTouchStart={(event) => {
+                    if (event.touches.length !== 1) {
+                        touchStart.current = null;
+                        return;
+                    }
+                    const touch = event.touches[0];
+                    touchStart.current = { x: touch.clientX, y: touch.clientY };
+                }}
+                onTouchEnd={handleTouchEnd}
+                onTouchCancel={() => { touchStart.current = null; }}
+            >
                 {images.map((src, index) => (
-                    <img
+                    <picture
                         key={src}
-                        src={src}
-                        loading="lazy"
-                        decoding="async"
-                        alt={`${title} screenshot ${index + 1}`}
                         aria-hidden={index !== activeImage}
-                        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-in-out ${index === activeImage ? "opacity-100" : "opacity-0"}`}
-                    />
+                        className={`absolute inset-0 h-full w-full transition-opacity duration-700 ease-in-out motion-reduce:transition-none ${index === activeImage ? "opacity-100" : "opacity-0"}`}
+                    >
+                        {mobileScreenshots?.[index] && (
+                            <source media="(min-width: 768px)" srcSet={src} />
+                        )}
+                        <img
+                            src={mobileScreenshots?.[index] || src}
+                            loading="lazy"
+                            decoding="async"
+                            draggable={false}
+                            alt={t('portfolio.screenshot_alt', { project: title, number: index + 1 })}
+                            className={`h-full w-full ${mobileScreenshots?.length ? "object-contain md:object-cover" : "object-cover"}`}
+                        />
+                    </picture>
                 ))}
                 {images.length > 1 && (
-                    <div className="absolute inset-x-0 bottom-3 flex justify-center gap-1.5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true">
-                        {images.map((src, index) => (
-                            <span
-                                key={src}
-                                className={`h-1.5 rounded-full transition-all duration-300 ${index === activeImage ? "w-5 bg-white" : "w-1.5 bg-white/50"}`}
-                            />
-                        ))}
+                    <div className="absolute inset-x-0 top-full flex h-10 items-center justify-center opacity-100 transition-opacity duration-300 md:top-auto md:bottom-3 md:opacity-0 md:group-hover:opacity-100 md:group-focus-within:opacity-100">
+                        <div className="flex">
+                            {images.map((src, index) => (
+                                <button
+                                    key={src}
+                                    type="button"
+                                    aria-label={t('portfolio.show_screenshot', { project: title, number: index + 1 })}
+                                    aria-pressed={index === activeImage}
+                                    onClick={() => setActiveImage(index)}
+                                    className="flex h-10 w-8 cursor-pointer items-center justify-center rounded-md bg-transparent p-0 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--color-beige)]"
+                                >
+                                    <span className={`h-1.5 rounded-full transition-all duration-300 ${index === activeImage ? "w-4 bg-[var(--color-beige)] md:bg-white" : "w-1.5 bg-[var(--color-moss)]/50 md:bg-white/50"}`} />
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 )}
             </div>

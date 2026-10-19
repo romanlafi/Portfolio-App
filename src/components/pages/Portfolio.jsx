@@ -1,8 +1,4 @@
-import {
-    FaReact,
-    FaPython,
-    FaDocker
-} from 'react-icons/fa';
+import {FaPython} from 'react-icons/fa';
 import {
     SiTailwindcss,
     SiFastapi,
@@ -11,12 +7,11 @@ import {
     SiVite,
     SiTypescript,
     SiCloudflareworkers,
+    SiPostgresql,
     SiHono,
     SiReactrouter,
-    SiLucide,
-    SiNginx
+    SiLucide
 } from 'react-icons/si';
-import {BiLogoPostgresql} from "react-icons/bi";
 import ProjectCard from "../ProjectCard.jsx";
 import SectionTitle from "../SectionTitle.jsx";
 import SectionWrapper from "../SectionWrapper.jsx";
@@ -31,6 +26,12 @@ export default function Portfolio() {
                 "/taskmanager-list.webp",
                 "/taskmanager-board.webp",
                 "/taskmanager-calendar.webp",
+            ],
+            mobileScreenshots: [
+                "/taskmanager-login-mobile.webp",
+                "/taskmanager-list-mobile.webp",
+                "/taskmanager-board-mobile.webp",
+                "/taskmanager-calendar-mobile.webp",
             ],
             tech: [
                 { id: "typescript", Icon: SiTypescript },
@@ -48,18 +49,28 @@ export default function Portfolio() {
         {
             id: "movie-graph",
             title: "MovieGraph",
-            image: "/moviegraph.webp",
+            screenshots: [
+                "/moviegraph-home.webp",
+                "/moviegraph-genres.webp",
+                "/moviegraph-movie.webp",
+                "/moviegraph-person.webp",
+            ],
+            mobileScreenshots: [
+                "/moviegraph-home-mobile.webp",
+                "/moviegraph-genres-mobile.webp",
+                "/moviegraph-movie-mobile.webp",
+                "/moviegraph-person-mobile.webp",
+            ],
             tech: [
                 { id: "the-movie-database", Icon: SiThemoviedatabase },
-                { id: "postgresql", Icon: BiLogoPostgresql },
+                { id: "typescript", Icon: SiTypescript },
+                { id: "react", Icon: SiReact },
+                { id: "vite", Icon: SiVite },
+                { id: "tailwind-css", Icon: SiTailwindcss },
                 { id: "python", Icon: FaPython },
                 { id: "fastapi", Icon: SiFastapi },
-                { id: "react", Icon: FaReact },
-                { id: "vite", Icon: SiVite },
-                { id: "typescript", Icon: SiTypescript },
-                { id: "tailwind-css", Icon: SiTailwindcss },
-                { id: "docker", Icon: FaDocker },
-                { id: "nginx", Icon: SiNginx },
+                { id: "postgresql", Icon: SiPostgresql },
+                { id: "cloudflare-workers", Icon: SiCloudflareworkers },
             ],
             github: "https://github.com/romanlafi/MovieGraph-App",
             demo: "https://moviegraph.romanlafi.org/",

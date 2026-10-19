@@ -27,6 +27,8 @@
   },
   "portfolio": {
     "title": "Portfolio",
+    "screenshot_alt": "{{project}}: captura de pantalla {{number}}",
+    "show_screenshot": "Ver captura {{number}} de {{project}}",
     "github_link": "Código",
     "webpage_link": "Ver sitio"
   },
