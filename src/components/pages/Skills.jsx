@@ -14,12 +14,11 @@ import {
     SiAndroidstudio,
     SiAngular, SiAudacity,
     SiBootstrap, SiGimp,
-    SiHibernate, SiInsomnia,
+    SiHibernate,
     SiIntellijidea,
     SiJavascript, SiMongodb, SiNeo4J,
-    SiNginx, SiPostgresql, SiPostman,
+    SiNginx, SiPostgresql,
     SiPycharm,
-    SiSap,
     SiSpring,
     SiTailwindcss,
     SiTypescript,
@@ -47,7 +46,6 @@ export default function Skills() {
                     <TechBadge icon={SiJavascript} label="JavaScript" color="#E4C700" />
                     <TechBadge icon={SiTypescript} label="TypeScript" color="#3178C6" />
                     <TechBadge icon={FaDatabase} label="SQL" color="#e38c00" />
-                    <TechBadge icon={SiSap} label="ABAP" color="#002554" />
                 </div>
             </div>
 
@@ -115,9 +113,6 @@ export default function Skills() {
                     <TechBadge icon={SiAndroidstudio} label="Android Studio" color="#4faf53" />
                     <TechBadge icon={DiVisualstudio} label="Visual Studio" color="#5C2D91" />
                     <TechBadge icon={BiLogoVisualStudio} label="Visual Studio Code" color="#007ACC" />
-                    <TechBadge icon={SiPostman} label="Postman" color="#FF6C37" />
-                    <TechBadge icon={SiInsomnia} label="Insomnia" color="#4000BF" />
-
                 </div>
             </div>
 

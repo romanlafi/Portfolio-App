@@ -4,7 +4,6 @@ const techUrls = {
     JavaScript: "https://www.javascript.com/",
     TypeScript: "https://www.typescriptlang.org/",
     SQL: "https://www.w3schools.com/sql/",
-    ABAP: "https://www.sap.com/index.html",
     HTML: "https://developer.mozilla.org/en-US/docs/Web/HTML",
     CSS: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     "Tailwind CSS": "https://tailwindcss.com/",
@@ -31,7 +30,6 @@ const techUrls = {
     "Android Studio": "https://developer.android.com/studio",
     "Visual Studio": "https://visualstudio.microsoft.com/",
     "Visual Studio Code": "https://code.visualstudio.com/",
-    Postman: "https://www.postman.com/",
     Audacity: "https://www.audacityteam.org/",
     GIMP: "https://www.gimp.org/"
 };
