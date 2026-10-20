@@ -49,7 +49,7 @@ export default function ProjectCard({ title, image, screenshots, mobileScreensho
             }}
         >
             <div
-                className={`relative w-full ${images.length > 1 ? "mb-10 md:mb-0" : ""} ${mobileScreenshots?.length ? "aspect-[39/70] max-h-[640px] bg-black/20 md:aspect-auto md:h-80 md:max-h-none" : "h-48 sm:h-80"}`}
+                className={`relative w-full ${images.length > 1 ? "mb-10 md:mb-0" : ""} ${mobileScreenshots?.length ? "h-[min(410px,50svh)] bg-black/20 md:aspect-auto md:h-80 md:max-h-none" : "h-48 sm:h-80"}`}
                 onTouchStart={(event) => {
                     if (event.touches.length !== 1) {
                         touchStart.current = null;
