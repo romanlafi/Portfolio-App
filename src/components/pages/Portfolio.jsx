@@ -10,7 +10,9 @@ import {
     SiPostgresql,
     SiHono,
     SiReactrouter,
-    SiLucide
+    SiLucide,
+    SiDrizzle,
+    SiMaplibre
 } from 'react-icons/si';
 import ProjectCard from "../ProjectCard.jsx";
 import SectionTitle from "../SectionTitle.jsx";
@@ -18,6 +20,24 @@ import SectionWrapper from "../SectionWrapper.jsx";
 
 export default function Portfolio() {
     const projects = [
+        {
+            id: "relieve",
+            title: "Relieve",
+            screenshots: ["/relieve-map.jpg"],
+            mobileScreenshots: ["/relieve-map-mobile.jpg"],
+            tech: [
+                { id: "typescript", Icon: SiTypescript },
+                { id: "react", Icon: SiReact },
+                { id: "vite", Icon: SiVite },
+                { id: "maplibre", Icon: SiMaplibre },
+                { id: "hono", Icon: SiHono },
+                { id: "drizzle", Icon: SiDrizzle },
+                { id: "postgresql", Icon: SiPostgresql },
+                { id: "cloudflare-workers", Icon: SiCloudflareworkers },
+            ],
+            github: "https://github.com/romanlafi/Relieve-App",
+            demo: "https://dev-relieve-app.romanoscense10.workers.dev/",
+        },
         {
             id: "task-manager",
             title: "TaskManager",
