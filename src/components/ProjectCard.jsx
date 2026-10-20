@@ -70,13 +70,23 @@ export default function ProjectCard({ title, image, screenshots, mobileScreensho
                         {mobileScreenshots?.[index] && (
                             <source media="(min-width: 768px)" srcSet={src} />
                         )}
+                        {mobileScreenshots?.[index] && (
+                            <div
+                                aria-hidden="true"
+                                className="absolute inset-0 bg-cover bg-center opacity-40 blur-xl scale-110 md:hidden"
+                                style={{ backgroundImage: `url("${mobileScreenshots[index]}")` }}
+                            />
+                        )}
+                        {mobileScreenshots?.[index] && (
+                            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/50 md:hidden" />
+                        )}
                         <img
                             src={mobileScreenshots?.[index] || src}
                             loading="lazy"
                             decoding="async"
                             draggable={false}
                             alt={t('portfolio.screenshot_alt', { project: title, number: index + 1 })}
-                            className={`h-full w-full ${mobileScreenshots?.length ? "object-contain md:object-cover" : "object-cover"}`}
+                            className={`relative h-full w-full ${mobileScreenshots?.length ? "object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)] md:object-cover md:drop-shadow-none" : "object-cover"}`}
                         />
                     </picture>
                 ))}
