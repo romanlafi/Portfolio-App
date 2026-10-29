@@ -23,8 +23,16 @@ export default function Portfolio() {
         {
             id: "relieve",
             title: "Relieve",
-            screenshots: ["/relieve-map.jpg"],
-            mobileScreenshots: ["/relieve-map-mobile.jpg"],
+            screenshots: [
+                "/relieve-map.webp",
+                "/relieve-aneto.webp",
+                "/relieve-ibones.webp",
+            ],
+            mobileScreenshots: [
+                "/relieve-map-mobile.webp",
+                "/relieve-aneto-mobile.webp",
+                "/relieve-ibones-mobile.webp",
+            ],
             tech: [
                 { id: "typescript", Icon: SiTypescript },
                 { id: "react", Icon: SiReact },
@@ -36,7 +44,7 @@ export default function Portfolio() {
                 { id: "cloudflare-workers", Icon: SiCloudflareworkers },
             ],
             github: "https://github.com/romanlafi/Relieve-App",
-            demo: "https://dev-relieve-app.romanoscense10.workers.dev/",
+            demo: "https://relieve.romanlafi.org/",
         },
         {
             id: "task-manager",
@@ -98,11 +106,11 @@ export default function Portfolio() {
     ];
 
     return (
-        <SectionWrapper id="portfolio" scrollMargin="scroll-mt-15 md:scroll-mt-0">
+        <SectionWrapper id="portfolio" maxWidth="max-w-none" scrollMargin="scroll-mt-15 md:scroll-mt-0">
 
                 <SectionTitle title="PORTFOLIO"/>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] gap-8 w-full">
                     {projects.map((project) => (
                         <ProjectCard key={project.id} {...project} />
                     ))}

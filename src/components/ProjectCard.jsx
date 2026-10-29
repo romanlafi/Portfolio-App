@@ -40,7 +40,7 @@ export default function ProjectCard({ title, image, screenshots, mobileScreensho
 
     return (
         <div
-            className="group w-full max-w-[500px] mx-auto bg-[var(--color-eerie)] rounded-xl shadow-lg overflow-hidden transition hover:scale-105 duration-300"
+            className="group w-full bg-[var(--color-eerie)] rounded-xl shadow-lg overflow-hidden transition hover:scale-105 duration-300"
             onPointerEnter={(event) => {
                 if (event.pointerType === "mouse") setHovered(true);
             }}
